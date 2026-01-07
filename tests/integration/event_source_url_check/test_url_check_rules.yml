@@ -3,7 +3,7 @@
   hosts: all
   sources:
     - name: check site
-      ansible.eda.url_check:
+      community.eda.url_check:
         urls:
           - http://localhost:8000/{{ URL_ENDPOINT | default("") }}
   rules:

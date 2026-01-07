@@ -29,7 +29,7 @@ options:
 """
 
 EXAMPLES = r"""
-- ansible.eda.file_watch:
+- community.eda.file_watch:
     path: "/directory/to/watch"
     recursive: true
     ignore_regexes: ['.*\\.pytest.*', '.*__pycache__.*', '.*/.git.*']

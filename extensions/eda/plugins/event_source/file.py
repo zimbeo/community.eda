@@ -21,7 +21,7 @@ options:
 """
 
 EXAMPLES = r"""
-- ansible.eda.file:
+- community.eda.file:
     files:
       - /path/to/fact.yml
 """

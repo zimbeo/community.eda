@@ -3,7 +3,7 @@
   hosts: all
   sources:
     - name: Match all messages
-      ansible.eda.journald:
+      community.eda.journald:
         match: "ALL"
   rules:
     - name: Print sudo journald event message

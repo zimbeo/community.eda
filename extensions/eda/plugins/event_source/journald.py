@@ -28,15 +28,15 @@ options:
 
 EXAMPLES = r"""
 - name: Return severity 6 messages
-  ansible.eda.journald:
+  community.eda.journald:
     match: "PRIORITY=6"
 
 - name: Return messages when sudo is used
-  ansible.eda.journald:
+  community.eda.journald:
     match: "_EXE=/usr/bin/sudo"
 
 - name: Return all messages
-  ansible.eda.journald:
+  community.eda.journald:
     match: "ALL"
 """
 

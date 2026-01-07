@@ -28,7 +28,7 @@ options:
 """
 
 EXAMPLES = r"""
-- ansible.eda.url_check:
+- community.eda.url_check:
     urls:
       - http://44.201.5.56:8000/docs
     delay: 10

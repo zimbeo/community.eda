@@ -3,7 +3,7 @@
   hosts: all
   sources:
     - name: check sites
-      ansible.eda.url_check:
+      community.eda.url_check:
         # big enough so only one check is performed in a test
         delay: 3600
         urls:

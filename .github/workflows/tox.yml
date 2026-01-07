@@ -46,13 +46,11 @@ jobs:
           # python versions, regardless the tox pyXY name.
           other_names: |
             lint:tox -e lint;tox -e ruff
-            docs-sanity:tox -e docs;tox -e py311-sanity-ansible2.17
-        # uncomment the below once we have tests added
-            # tox -e py312-unit;tox -e py312-integration;tox -e coverage
-            # py311:tox -e py311-unit; tox -e py311-integration;tox -e coverage
-            # py312:tox -e py312-unit; tox -e py312-integration;tox -e coverage
-            # py311-linux-arm64:tox -e py311-unit;tox -e py311-integration;tox -e coverage
-            # staging: tox -e py311-staging
+            docs-sanity:tox -e docs;tox -e py311-sanity-ansible2.17;tox -e py312-sanity-ansible2.18
+            py311:tox -e py311-unit; tox -e py311-integration;tox -e coverage
+            py312:tox -e py312-unit; tox -e py312-integration;tox -e coverage
+            py313:tox -e py313-unit; tox -e py313-integration;tox -e coverage
+          # py311-linux-arm64:tox -e py311-unit;tox -e py311-integration;tox -e coverage
           # ^ arm64 runner is using py311 for matching python version used in AAP 2.5
           # building docs on macos is needed to avoid diverging behavior
           platforms: linux,macos,linux-arm64:ubuntu-24.04-arm64-2core

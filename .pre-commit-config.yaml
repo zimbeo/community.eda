@@ -51,7 +51,11 @@ repos:
         args: []
         language_version: python3.11 # minimal supported version, keeps results consistent
         additional_dependencies:
+          - aiohttp
           - ansible-core>=2.15
+          - pytest
+          - types-PyYAML
+          - watchdog>=5.0.0
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: "v0.6.3"
@@ -77,7 +81,11 @@ repos:
         args:
           - --output-format=colorized
         additional_dependencies:
+          - aiohttp
           - ansible-core
+          - pytest
+          - pyyaml
+          - watchdog>=5.0.0
   - repo: local
     hooks:
       - id: ansible-test-sanity

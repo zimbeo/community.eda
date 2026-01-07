@@ -1,2 +1,5 @@
 ansible-core>=2.15
 pyyaml>=6.0.1
+aiohttp
+systemd-python; sys_platform != 'darwin'
+watchdog>=5.0.0  # types
